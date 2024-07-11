@@ -16,7 +16,7 @@ class _TestapiState extends State<Testapi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("TEST API"),
+        title: const Text("test_api.dart"),
       ),
       body: Center(
         child: Column(
@@ -38,7 +38,7 @@ class _TestapiState extends State<Testapi> {
 
   ////////////////  test api   /////////////////////////////////////
   void getMessageFromAPI() async {
-    String url = "http://10.40.192.71/master_crud_api/hello_api.php";
+    String url = "http://10.40.192.79/master_crud_api/hello_api.php";
 
     final Map<String, dynamic> queryParams = {
       "name": "Natthpon",

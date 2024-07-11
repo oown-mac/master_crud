@@ -8,7 +8,7 @@ class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Menu"),
+        title: const Text("Menu.dart"),
       ),
       body: Center(
         child: Column(
