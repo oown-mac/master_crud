@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:http/http.dart' as http;
+import 'package:master_crud/borrow_list.dart';
 
 class Logintomysql extends StatefulWidget {
   const Logintomysql({super.key});
@@ -82,8 +83,17 @@ class _LogintomysqlState extends State<Logintomysql> {
         var user = jsonDecode(response.body); //return type list<map>
         if (user.isNotEmpty) {
           setState(() {
+            print(response.body); // for test json response
             //_msg = response.body;
             _msg = user[0]['adm_fullname'];
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => BorrowList(
+                    userid: user[0]['user_id'],
+                    userFullName: user[0]['adm_fullname']),
+              ),
+            );
           });
         } else {
           setState(() {
