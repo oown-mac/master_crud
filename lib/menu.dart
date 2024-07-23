@@ -32,6 +32,12 @@ class Menu extends StatelessWidget {
               },
               child: const Text("Login to MySQL"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/insert_regis");
+              },
+              child: const Text("Insert Registration"),
+            ),
           ],
         ),
       ),

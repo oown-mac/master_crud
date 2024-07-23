@@ -14,8 +14,8 @@ class Logintomysql extends StatefulWidget {
 
 class _LogintomysqlState extends State<Logintomysql> {
   String _msg = "";
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _LogintomysqlState extends State<Logintomysql> {
               const Text("Login to MySQL"),
               const Gap(20),
               TextField(
-                controller: _usernameController,
+                controller: usernameController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "username",
@@ -40,7 +40,7 @@ class _LogintomysqlState extends State<Logintomysql> {
               ),
               const Gap(10),
               TextField(
-                controller: _passwordController,
+                controller: passwordController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "password",
@@ -73,8 +73,8 @@ class _LogintomysqlState extends State<Logintomysql> {
     String url = "http://localhost/master_crud_api/login.php";
 
     final Map<String, dynamic> queryParams = {
-      "username": _usernameController.text,
-      "password": _passwordController.text,
+      "username": usernameController.text,
+      "password": passwordController.text,
     };
     try {
       http.Response response =

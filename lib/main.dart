@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:master_crud/insert_regis.dart';
 import 'package:master_crud/login_to_mysql.dart';
 import 'package:master_crud/menu.dart';
 import 'package:master_crud/test_api.dart';
@@ -18,6 +19,8 @@ class MainApp extends StatelessWidget {
         "/menu": (context) => const Menu(),
         "/test_api": (context) => const Testapi(),
         "/login_to_mysql": (context) => const Logintomysql(),
+        "/insert_regis": (context) => const InsertRegis(),
+        
       },
     );
   }
