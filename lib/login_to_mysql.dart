@@ -70,7 +70,8 @@ class _LogintomysqlState extends State<Logintomysql> {
   }
 
   void login() async {
-    String url = "http://localhost/master_crud_api/login.php";
+    //String url = "http://localhost/master_crud_api/login.php";
+    String url = "https://ronglotmedstock.com/master_crud_api/login.php";
 
     final Map<String, dynamic> queryParams = {
       "username": usernameController.text,

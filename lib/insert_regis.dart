@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:http/http.dart' as http;
 import 'package:master_crud/functions/public_functions.dart';
-import 'dart:convert';
 
 class InsertRegis extends StatefulWidget {
   const InsertRegis({super.key});
@@ -102,7 +101,8 @@ class _InsertRegisState extends State<InsertRegis> {
 
   void saveAdmin() async {
     //save data to database
-    Uri uri = Uri.parse("http://localhost/master_crud_api/insert_regis.php");
+    //Uri uri = Uri.parse("http://localhost/master_crud_api/insert_regis.php");
+    Uri uri = Uri.parse("https://ronglotmedstock.com/master_crud_api/insert_regis.php");
 
     Map<String, dynamic> data = {
       "userid": useridController.text,

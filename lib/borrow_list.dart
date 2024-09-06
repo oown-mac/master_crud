@@ -106,7 +106,9 @@ class _BorrowListState extends State<BorrowList> {
     await Future.delayed(
       const Duration(seconds: 1),
     );
-    String url = "http://localhost/master_crud_api/get_borrowlist.php";
+    //String url = "http://localhost/master_crud_api/get_borrowlist.php";
+    String url =
+        "https://ronglotmedstock.com/master_crud_api/get_borrowlist.php";
 
     final Map<String, dynamic> queryParams = {
       "userid": widget.userid.toString(),
