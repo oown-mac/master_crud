@@ -22,6 +22,7 @@ class _LogintomysqlState extends State<Logintomysql> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("login_to_mysql.dart"),
+        backgroundColor: Colors.green[800],
       ),
       body: Center(
         child: Padding(

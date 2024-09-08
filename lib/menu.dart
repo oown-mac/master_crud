@@ -9,6 +9,7 @@ class Menu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Menu.dart"),
+        backgroundColor: Colors.blue[900],
       ),
       body: Center(
         child: Column(
