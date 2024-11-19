@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:http/http.dart' as http;
@@ -102,7 +105,8 @@ class _InsertRegisState extends State<InsertRegis> {
   void saveAdmin() async {
     //save data to database
     //Uri uri = Uri.parse("http://localhost/master_crud_api/insert_regis.php");
-    Uri uri = Uri.parse("https://ronglotmedstock.com/master_crud_api/insert_regis.php");
+    Uri uri = Uri.parse(
+        "https://ronglotmedstock.com/master_crud_api/insert_regis.php");
 
     Map<String, dynamic> data = {
       "userid": useridController.text,
@@ -114,8 +118,10 @@ class _InsertRegisState extends State<InsertRegis> {
     http.Response response = await http.post(uri, body: data);
 
     if (response.statusCode == 200) {
-      print(response.body);
-      print(response.statusCode);
+      log(response.body);
+      if (kDebugMode) {
+        print(response.statusCode);
+      }
 
       if (response.body == 1.toString()) {
         showMessageBox(
